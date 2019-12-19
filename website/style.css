@@ -253,3 +253,297 @@ header li {
 .bottom li a:hover {
   text-decoration: underline;
 }
+
+/*article*/
+
+article {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 22% 76%;
+  grid-gap: 2%;
+  display: -ms-grid;
+  -ms-grid-columns: 22% 76%;
+  margin: 30px auto;
+}
+
+/*aside*/
+
+aside img {
+  width: 100%;  
+}
+
+aside .which img {
+  margin-bottom: 20px;
+}
+
+aside div[class^="title"] h1 {
+  background: #ececec;
+  width: 100%;
+  height: 30px;
+  font-size: 1.5em;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 20px 0;
+}
+
+aside .title-arrow h1::before {
+  content:"";
+  border-top: 20px solid #ececec;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
+}
+
+aside .advice {
+  width: 90%;
+  border: 1px solid #ececec;
+  padding: 0 5% 3% 5%;
+  margin-bottom: 35px;
+}
+
+aside .advice .ad {
+  position: relative;
+  margin: 8% 0;
+}
+
+aside .advice .ad img {
+  display: flex;
+}
+
+aside .advice .ad div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  bottom: 0;
+  padding: 3% 5%;
+  width: 90%;
+  background: rgba(236, 236, 236, .85);  
+}
+
+aside .advice a {
+  color: #f00;
+  position: relative;
+  width: fit-content;
+  font-size: 1.15em;
+}
+
+aside .advice .ad a {
+  margin: 0;
+}
+
+aside .advice p {
+  font-size: 1.15em;
+  line-height: 1.25em;
+}
+
+aside .advice a::after {
+  content:"";
+  font-size: 0;
+  border-left: 10px solid #f00;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  position: absolute;
+  bottom: 3px;
+  right: -15px;
+}
+
+aside .twitter {
+  margin-bottom: 35px;
+}
+
+aside .twitter p {
+  font-size: 1.5em;
+}
+
+aside .twitter span {
+  font-size: .7em;
+  color: #505050;
+}
+
+aside .twitter a {
+  color: #3c97ff;
+}
+aside .twitter .title {
+  height: 40px;
+  margin: 0 10px;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+aside .twitter .info {
+  color: #505050;
+  font-weight: 600;
+  border: 1px solid #505050;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside .twitter .tweets {
+  width: 100%;
+  height: 360px;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  overflow-y: scroll;
+}
+
+aside .twitter .footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+}
+
+aside .tweet {
+  padding: 10px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+aside .tweet img {
+  width: 40px;
+  height: 40px;
+}
+
+aside .tweet .header {
+  display: grid;
+  grid-template-columns: 50px 1fr 20px;
+  display: -ms-grid;
+  -ms-grid-columns: 50px 1fr 20px;
+  margin-bottom: 10px;
+}
+
+aside .tweet .header div {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+aside .tweet .header h1 {
+  color: #000;
+}
+
+aside .tweet .header p {
+  color: #808080;
+  font-size: 1em;
+  margin-top: 3px;
+}
+
+aside .tweet .header i {
+  color: #e2e2e2;
+  font-size: 1.2em;
+}
+
+aside .tweet .content p {
+  font-size: .85em;
+  line-height: 1.3rem;
+  margin-bottom: 10px;
+}
+
+aside .tweet .content img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+aside .tweet .footer  {
+  margin: 10px 0;
+  align-items: center;
+}
+
+aside .tweet .footer i {
+  color: #e2e2e2;
+  font-size: 1.3em;
+  margin: 0 15px 0 0;
+}
+
+aside .tweet .footer p {
+  color: #808080;
+  font-size: .8rem;
+}
+
+aside .tweet:hover {
+  background: #ecf3f5;
+  cursor: pointer;
+}
+
+aside .tweet:hover .header i {
+  color: #57b3d8;
+}
+
+aside .tweet:hover .footer i {
+  color: #808080;
+}
+
+aside .connect {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+aside .connect i {
+  font-size: 2.25em;
+  height: 40px;
+  margin: 20px 0;
+  border-right: 1px solid #e2e2e2;
+  display: grid;
+  place-content: center;
+}
+
+aside .connect i[class~="fa-facebook-f"] {
+  color: #0051ff;
+}
+
+aside .connect i[class~="fa-twitter"] {
+  color: #3c97ff;
+}
+
+aside .connect i[class~="fa-youtube"] {
+  color: #f00;
+}
+
+aside .connect i[class~="fa-instagram"] {
+  color: #57b3d8;
+}
+
+aside .connect p {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 1.3em;
+  color: #505050;
+}
+
+aside .trustpilot {
+  padding: 15px;
+  border: 1px solid #e2e2e2;
+  margin: 20px 0;
+}
+
+aside .title h1 {
+  margin: 20px 0 0 0;
+}
+
+aside .why-buy {
+  border:  solid #e2e2e2;
+  margin-top: -20px;
+}
+
+aside .why-buy ul {
+  margin: 15px 20px 15px 30px;
+}
+
+aside .why-buy li {
+  color: #505050;
+  line-height: 1.75em;
+}

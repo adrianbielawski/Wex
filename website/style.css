@@ -279,7 +279,7 @@ aside .which img {
 aside div[class^="title"] h1 {
   background: #ececec;
   width: 100%;
-  height: 30px;
+  min-height: 30px;
   font-size: 1.5em;
   font-weight: 600;
   display: flex;
@@ -317,9 +317,6 @@ aside .advice .ad img {
 
 aside .advice .ad div {
   position: absolute;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
   bottom: 0;
   padding: 3% 5%;
   width: 90%;
@@ -329,8 +326,6 @@ aside .advice .ad div {
 aside .advice a {
   color: #f00;
   position: relative;
-  width: 80px;
-  width: fit-content;
   font-size: 1.15em;
 }
 
@@ -604,10 +599,6 @@ aside .why-buy li {
   width: 100%;
 }
 
-.content .slider .img {
-  min-height: 330px;
-}
-
 .content .slider img {
   max-width: 100%;
   display: flex;
@@ -642,4 +633,279 @@ aside .why-buy li {
 
 .content .slider  a.active {
   background: #bd0000;
+}
+
+/*products*/
+
+.products {
+  display: grid;
+    display: -ms-grid;
+  grid-template-columns: 31.33% 31.33% 31.33%;
+    -ms-grid-columns: 31.33% 3% 31.33% 3% 31.33%;
+  grid-column-gap: 3%;
+  grid-row-gap: 20px;
+    -ms-grid-rows: 1fr min-content 1fr 20px 1fr;
+  margin: 20px 0;
+}
+
+.products .item:hover img {
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.products .item:hover .description {
+  background: rgba(0, 0, 0, .9);  
+}
+
+.products .item {
+  display: grid;
+    display: -ms-grid;
+  grid-template-rows: 1fr min-content;
+    -ms-grid-rows: 2fr;
+}
+
+.products .item img {
+  width: 100%;
+  grid-row: 1 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+  grid-column: 1;
+  transition-duration: .4s;
+  transition-delay: .1s;
+  z-index: -1;
+}
+
+.products .item div {
+  background: rgba(0, 0, 0, 0.8);
+  grid-row: 2;
+    -ms-grid-row: 2;
+  grid-column: 1;
+}
+
+.products .item p {
+  color: #fff;
+  line-height: 1.5em;
+}
+
+.products .item .offer {
+  text-transform: uppercase;
+  background: rgba(240, 0, 0, 0.8);
+  padding: 0 0 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.products .item .description div{
+  display: grid;
+    display: -ms-grid;
+  grid-template-columns: min-content 1fr;
+    -ms-grid-columns: 2fr;
+  grid-template-rows: 1fr min-content;
+    -ms-grid-rows: min-content 1fr;
+  background: none;
+  margin: 5px 10px;
+}
+
+.products .item .description div p {
+  grid-column: 1 / 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  grid-row: 1;
+    -ms-grid-row: 1;
+  line-height: 1em;
+}
+
+.products .item .description .price {
+  grid-column: 1;
+    -ms-grid-column: 1;
+  grid-row: 2;
+    -ms-grid-row: 2;
+  font-size: 1.5em;
+  margin-top: 5px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.products .item .description span {
+  grid-column: 2;
+    -ms-grid-column: 2;
+  grid-row: 2;
+    -ms-grid-row: 2;
+  color: #fff;
+  font-size: .8em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.products .info {
+  width: 40%;
+  width: fit-content;
+  height: 10%;
+  padding: 7px 5px;
+  margin: 5%;
+  background: #f00;
+  text-align: center;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.products .item:nth-of-type(1) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+}
+
+.products .item:nth-of-type(2) {
+  -ms-grid-column: 3;
+  -ms-grid-row: 1;
+}
+
+.products .item:nth-of-type(3) {
+  -ms-grid-column: 5;
+  -ms-grid-row: 1;
+}
+
+.products .item:nth-of-type(4) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 3;
+}
+
+.products .item:nth-of-type(5) {
+  -ms-grid-column: 3;
+  -ms-grid-row: 3;
+}
+
+.products .item:nth-of-type(6) {
+  -ms-grid-column: 5;
+  -ms-grid-row: 3;
+}
+
+.products .item:nth-of-type(7) {
+  -ms-grid-column: 1;
+  -ms-grid-row: 5;
+}
+
+.products .item:nth-of-type(8) {
+  -ms-grid-column: 3;
+  -ms-grid-row: 5;
+}
+
+.products .item:nth-of-type(9) {
+  -ms-grid-column: 5;
+  -ms-grid-row: 5;
+}
+
+/*brands*/
+
+.brands {
+  grid-column: 1 / 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+  display: grid;
+    display: -ms-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 3% 1fr 3% 1fr;
+  grid-column-gap: 3%;
+  -ms-grid-row: 2;
+  -ms-grid-rows: 20px 1fr 20px;
+}
+
+.brands .title p {
+  font-size: 1.2em;
+  text-align: right;
+  width: 100%;
+} 
+
+.brands .title a {
+  color: #f00;
+}
+
+.brands .title {
+  border-right: 2px solid #f00;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  padding-right: 25%;
+}
+
+.brands div[class^="grid"] {
+  display: grid;
+    display: -ms-grid;
+  grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 50% 50%;
+}
+
+.brands .img a {
+  background-image: url(/assets/images/featured-brands.gif);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  min-height: 38px;
+  width: 100%;
+  display: block;
+}
+
+.brands .canon {
+  background-position-y: 5px;
+}
+
+.brands .dji {
+  background-position-y: -430px;
+}
+
+.brands .fujifilm {
+  background-position-y: -40px;
+}
+
+.brands .nicon {
+  background-position-y: -80px;
+}
+
+.brands .manfrotto {
+  background-position-y: -200px;
+}
+
+.brands .elinchrom {
+  background-position-y: -155px;
+}
+
+.brands .sony {
+  background-position-y: -120px;
+}
+
+.brands .sigma {
+  background-position-y: -340px;
+}
+
+.brands .pentax {
+  background-position-y: -246px;
+}
+
+.brands .lowepro {
+  background-position-y: -290px;
+}
+
+.brands .grid:nth-of-type(1)  {
+  -ms-grid-column: 1;
+  -ms-grid-row: 2;
+}
+
+.brands .grid:nth-of-type(2)  {
+  -ms-grid-column: 3;
+  -ms-grid-row: 2;
+}
+
+.brands .grid:nth-of-type(3) {
+  -ms-grid-column: 5;
+  -ms-grid-row: 2;
+}
+
+.brands .grid div:nth-of-type(1) {
+  -ms-grid-column: 1;
+}
+
+.brands .grid div:nth-of-type(2) {
+  -ms-grid-column: 2;
 }

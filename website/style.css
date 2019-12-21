@@ -23,9 +23,8 @@ header li {
   grid-template-columns: 21.67% 56.66% 21.67%;
   display: -ms-grid;
   -ms-grid-columns: 21.67% 56.66% 21.67%;
-  padding: 20px 0;
+  padding: 15px 2.5%;
   max-width: 1200px;
-  padding: 0 30px;
   margin: 20px auto;
 }
 
@@ -262,8 +261,9 @@ article {
   grid-template-columns: 22% 76%;
   grid-gap: 2%;
   display: -ms-grid;
-  -ms-grid-columns: 22% 76%;
+  -ms-grid-columns: 22% 2% 76%;
   margin: 30px auto;
+  padding: 0 2.5%;
 }
 
 /*aside*/
@@ -317,7 +317,7 @@ aside .advice .ad img {
 
 aside .advice .ad div {
   position: absolute;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
   bottom: 0;
@@ -329,12 +329,9 @@ aside .advice .ad div {
 aside .advice a {
   color: #f00;
   position: relative;
+  width: 80px;
   width: fit-content;
   font-size: 1.15em;
-}
-
-aside .advice .ad a {
-  margin: 0;
 }
 
 aside .advice p {
@@ -369,6 +366,7 @@ aside .twitter span {
 aside .twitter a {
   color: #3c97ff;
 }
+
 aside .twitter .title {
   height: 40px;
   margin: 0 10px;
@@ -425,6 +423,7 @@ aside .tweet .header {
 aside .tweet .header div {
   grid-column: 2;
   grid-row: 1;
+  -ms-grid-column: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -443,6 +442,7 @@ aside .tweet .header p {
 aside .tweet .header i {
   color: #e2e2e2;
   font-size: 1.2em;
+  -ms-grid-column: 3;
 }
 
 aside .tweet .content p {
@@ -489,6 +489,9 @@ aside .tweet:hover .footer i {
 aside .connect {
   display: grid;
   grid-template-columns: 20% 80%;
+  display: -ms-grid;
+  -ms-grid-columns: 20% 80%;
+  -ms-grid-rows: 4fr;
 }
 
 aside .connect i {
@@ -496,24 +499,29 @@ aside .connect i {
   height: 40px;
   margin: 20px 0;
   border-right: 1px solid #e2e2e2;
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 aside .connect i[class~="fa-facebook-f"] {
   color: #0051ff;
+  -ms-grid-row: 1;
 }
 
 aside .connect i[class~="fa-twitter"] {
   color: #3c97ff;
+  -ms-grid-row: 2;
 }
 
 aside .connect i[class~="fa-youtube"] {
   color: #f00;
+  -ms-grid-row: 3;
 }
 
 aside .connect i[class~="fa-instagram"] {
   color: #57b3d8;
+  -ms-grid-row: 4;
 }
 
 aside .connect p {
@@ -522,8 +530,25 @@ aside .connect p {
   margin-left: 10px;
   font-size: 1.3em;
   color: #505050;
+  -ms-grid-column: 2;
 }
 
+aside .connect p:nth-of-type(1) {
+  -ms-grid-row: 1; 
+}
+
+aside .connect p:nth-of-type(2) {
+ -ms-grid-row: 2; 
+}
+
+aside .connect p:nth-of-type(3) {
+  -ms-grid-row: 3; 
+}
+ 
+ aside .connect p:nth-of-type(4) {
+  -ms-grid-row: 4; 
+}
+ 
 aside .trustpilot {
   padding: 15px;
   border: 1px solid #e2e2e2;
@@ -546,4 +571,75 @@ aside .why-buy ul {
 aside .why-buy li {
   color: #505050;
   line-height: 1.75em;
+}
+
+/*content*/
+
+.content {
+  -ms-grid-column: 3;
+}
+
+.content .slider div {
+  background: #e2e2e2;
+  height: 20px;
+  width: 98%;
+  padding-right: 2%;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.content .slider div a {
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  border-radius: 50%;
+  background: #505050;
+}
+
+.content .slider a {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.content .slider .img {
+  min-height: 330px;
+}
+
+.content .slider img {
+  max-width: 100%;
+  display: flex;
+  background: #fff;
+}
+
+.content .slider i {
+  width: 6%;
+  height: 17%;
+  padding: 0;
+  background: #e2e2e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 70px;
+  position: absolute;
+  visibility: hidden;
+}
+
+.content .slider i[class~="fa-chevron-right"] {
+  right: 0;
+}
+
+.content .slider i:hover {
+  background: #6e6d6d;
+  color: #fff;
+}
+
+.content .slider a:hover i {
+  visibility: visible;
+}
+
+.content .slider  a.active {
+  background: #bd0000;
 }

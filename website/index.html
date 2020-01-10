@@ -3,6 +3,8 @@
   <head>
     <link href="/website/style.css" rel="stylesheet">
     <title>Wex Photo Video</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <link href="/assets/images/mini-logo.jpg" rel="shortcut icon">
     <link href="/assets/fonts/css/all.min.css" rel="stylesheet">
   </head>
@@ -37,14 +39,25 @@
         </div>
         <div class="cart">
           <a class="tel" href="tel:01603 486413">01603 486413</a>
-          <span>Lines open 7 days a week</span>
-          <a class="checkout" href="#">
-            <i class="fas fa-shopping-basket"><span>0 Items: £0.00</span></i>
-            <span>Checkout</span>
-          </a>
+          <p>Lines open 7 days a week</p>
+          <div class="checkout" href="#">
+            <div>
+              <i class="fas fa-shopping-basket"></i>
+              <span>0 Items</span>
+              <span class="value">: £0.00</span>
+            </div>
+            <a href="#">Checkout</a>
+          </div>
         </div>
       </div>
       <div class="middle">
+        <a href="#" class="burger">
+          <i class="fas fa-bars"></i>
+        </a>
+        <div class="input">
+          <input type="search" class="search" placeholder="Search Wex">
+          <a><i class="fas fa-play"></i></a>
+        </div>
         <div>
           <ul>
             <li><a href="#">Photography</a></li>
@@ -371,7 +384,7 @@
         </div>
         <div class="newsletter">
           <h1>Sign Up to Our Newsletter Today!</h1>
-          <form>
+          <form class="sign-up">
             <input class="email" type="email" placeholder="Sign up to our newsletter">
             <input class="submit" type="submit" value="">
             <i class="fas fa-play"></i>
@@ -386,7 +399,7 @@
         <img class="ad" src="/assets/images/pro-video.png">
         <div class="offers">
           <div class="offer">
-            <span class="label">Up to $365 Cashback</span class="label">
+            <span class="label"><p>Up to $365 Cashback</p></span class="label">
             <img src="/assets/images/cashback-offers.png">
             <div class="description">
               <h1>Cashback Offers</h1>
@@ -400,7 +413,7 @@
             </div>
           </div>
           <div class="offer">
-            <span class="label">No Deposite</span class="label">
+            <span class="label"><p>No Deposite</p></span class="label">
             <img src="/assets/images/finance-offers.png">
             <div class="description">
               <h1>Cashback Offers</h1>
@@ -432,7 +445,7 @@
             <img src="/assets/images/interfit-honey-badger.png">
           </div>
           <div class="offer">
-            <span class="label">New</span class="label">
+            <span class="label"><p>New</p></span class="label">
             <img src="/assets/images/finance-offers.png">
             <div class="description">
               <h1>Latest Products</h1>
@@ -446,7 +459,7 @@
             </div>
           </div>
           <div class="offer">
-            <img src="/assets/images/finance-offers.png">
+            <img src="/assets/images/christmas-shop.jpg">
             <div class="description">
               <h1>Upgrade Offers</h1>
               <p>Realise the value of your unwanted equipment.</p>
@@ -459,7 +472,7 @@
             </div>
           </div>
           <div class="offer">
-            <img src="/assets/images/finance-offers.png">
+            <img src="/assets/images/camera.jpg">
             <div class="description">
               <h1>Popular Cameras</h1>
               <p>Realise the value of your unwanted equipment.</p>
@@ -472,10 +485,11 @@
             </div>
           </div>
           <div class="offer">
+            <span class="label"><p>New</p></span class="label">
             <img src="/assets/images/finance-offers.png">
             <div class="description">
-              <h1>Popular Lenses</h1>
-              <p>Realise the value of your unwanted equipment.</p>
+              <h1>Latest Products</h1>
+              <p>Find the latest additions to our site, whatever they may be.</p>
             </div>
             <div class="button">
               <a href="#">
@@ -485,7 +499,7 @@
             </div>
           </div>
           <div class="visit-wex">
-            <span class="label">Visit Wex</span>
+            <span class="label"><p>Visit Wex</p></span>
             <img src="/assets/images/wexphotovideo-stores.jpg">
             <div class="description">
               <h1>Visit Wex Photo Video Near You</h1>
@@ -501,6 +515,97 @@
         </div>
       </div>
     </article>
+    <footer>
+      <div class="top">
+        <div class="content">
+          <div class="social">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+          <form class="sign-up">
+            <input class="email" type="email" placeholder="Sign up to our newsletter">
+            <input class="submit" type="submit" value="">
+            <i class="fas fa-play"></i>
+          </form>
+        </div>
+      </div>
+      <div class="menu">
+        <div>
+          <ul>
+            <li class="title">Navigation</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Account</a></li>
+            <li class="mobile"><a href="#">Advice</a></li>
+            <li class="mobile"><a href="#">Feedback</a></li>
+            <li><a href="#">Popular Cameras</a></li>
+            <li><a href="#">Discontinued Cameras</a></li>
+          </ul>
+          <ul>
+            <li class="title">Help</li>
+            <li><a href="#">Contact Us</a></li>
+            <li class="mobile"><a href="#">Delivery info</a></li>
+            <li class="mobile"><a href="#">Returns</a></li>
+            <li class="mobile"><a href="#">Payment Options</a></li>
+          </ul>
+          <ul>
+            <li class="title">News</li>
+            <li><a href="#">About Us</a></li>
+            <li class="mobile"><a href="#">Our Awards</a></li>
+            <li><a href="#">Store Finder</a></li>
+          </ul>
+          <ul>
+            <li class="title">Services</li>
+            <li class="mobile"><a href="#">Wex Events</a></li>
+            <li class="mobile"><a href="#">Part-Exchange</a></li>
+            <li><a href="#">Camera Rental</a></li>
+            <li><a href="#">Camera Repair</a></li>
+          </ul>
+          <ul>
+            <li class="title">Other</li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy & Cookies</a></li>
+            <li class="mobile"><a href="#">Sitemap</a></li>
+            <li class="mobile"><a href="#">Modern Slavery Statement</a></li>
+          </ul>
+          <ul>
+            <li class="title">Offers</li>
+            <li><a href="#">Cashback</a></li>
+            <li class="mobile"><a href="#">Trade-in Bonuses</a></li>
+            <li class="last"><a href="#">Wex Voucher Codes</a></li>
+            <li class="mobile"><a href="#">Affilate Programme</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="company-info">
+        <p class="mobile">Orders, Enquiries & Advice:<br>01603486413</p>
+        <p class="mobile lines">Lines open 7 days a week</p>
+        <p>Wex Photo Video is a trading name of Calumet Photographic Limited (Company Registration no. 00425579) and Warehouse Express Limited (Company Registration no. 03366976).</p>
+        <p>Warehouse Express Limited operates alongside its sister company, Calumet Photographic Limited (Company registration no. 0425579), which operates a number of retail stores across the UK branded as Wex Photo Video.</p>
+        <p><strong>Registered Office:</strong> 13 Frensham Road, Sweet Briar Industrial Estate, Norwich, Norfolk, NR3 2BT.</p>
+        <p>Technical specifications are for guidance only and cannot be guaranteed accurate. All offers subject to availability and while stocks last. Errors and omissions excepted.
+          Warehouse Express Ltd trading as Wex Photo Video, 13 Frensham Road, Norwich. NR3 2BT. Company registration number 03366976 acts as a credit broker and not the lender. Warehouse Express Ltd only offers financial products from Barclays Partner Finance. Barclays Partner Finance acts as the lender. Barclays Partner Finance is a trading name of Clydesdale Financial Services Limited a wholly owned subsidiary of Barclays Bank PLC. Clydesdale Financial Services Limited is authorised and regulated by the Financial Conduct Authority (Financial Services Register number 311753) Registered in England. Registered No 2901725. Registered office: 1 Churchill Place, London. E14 5HP.</p>
+        <p>© 2019 Warehouse Express Ltd.</p>
+        <div class="info">
+          <div class="trustpilot"><!-- TrustBox script -->
+          <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async=""></script>
+          <!-- End Trustbox script --> <!-- TrustBox widget - Mini -->
+          <div class="trustpilot-widget" data-locale="en-GB" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="4fba1f3f0000640005158a13" data-style-height="125px" data-style-width="100%" data-theme="light" style="position: relative;"><iframe frameborder="0" scrolling="no" title="Customer reviews powered by Trustpilot" loading="auto" src="https://widget.trustpilot.com/trustboxes/53aa8807dec7e10d38f59f32/index.html?templateId=53aa8807dec7e10d38f59f32&amp;businessunitId=4fba1f3f0000640005158a13#locale=en-GB&amp;styleHeight=125px&amp;styleWidth=100%25&amp;theme=light" style="position: relative; height: 125px; width: 100%; border-style: none; display: block; overflow: hidden;"></iframe></div>
+          <!-- End TrustBox widget -->
+          </div>
+          <div class="payment">
+            <img src="/assets/images/payment-types.png">
+            <a href="#">
+              <img src="/assets/images/norton-secured.png">
+            </a>
+          </div>
+          <a href="#">
+            <img src="/assets/images/ISO-9001.jpg">
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
 
